@@ -10,12 +10,12 @@
 ;(function ( $, window, document, undefined ) {
 	
 	// set scope globals
-	 var pluginName = 'snapNav',
-		  defaults = {
-			classSnapHolder: "snap-holder",
-			classSnapFixed: "snap-fixed"
-		  },
-		  isFixed = false, currOffset, el, $el;
+	var pluginName = 'snapNav',
+	defaults = {
+		classSnapHolder: "snap-holder",
+		classSnapFixed: "snap-fixed"
+	},
+	isFixed = false, currOffset, el, $el;
 	
 	// construct
 	 function Plugin( element, options ) {
