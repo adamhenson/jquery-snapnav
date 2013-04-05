@@ -5,6 +5,7 @@
  *
  * @author Adam Henson
  * Licensed under the MIT license
+ * https://github.com/adamhenson/jquery-snapnav
  *
  */
 ;(function ( $, window, document, undefined ) {
