@@ -12,19 +12,19 @@
 	// set scope globals
 	 var pluginName = 'snapNav',
 		  defaults = {
-				classSnapHolder: "snap-holder",
-				classSnapFixed: "snap-fixed"
+			classSnapHolder: "snap-holder",
+			classSnapFixed: "snap-fixed"
 		  },
 		  isFixed = false, currOffset, el, $el;
 	
 	// construct
 	 function Plugin( element, options ) {
-		  el = element;
-		  $el = $(element);
-		  this.options = $.extend( {}, defaults, options);
-		  this._defaults = defaults;
-		  this._name = pluginName;
-		  this.init();
+		el = element;
+		$el = $(element);
+		this.options = $.extend( {}, defaults, options);
+		this._defaults = defaults;
+		this._name = pluginName;
+		this.init();
 	 }
 	
 	 // set a placeholder to allow detection of original position. wrap in a div with position fixed style. allowing a class to be set for both new elements to allow overriding of style
@@ -36,7 +36,7 @@
 	
 	// unset the fixed position to original state by removing placeholder and container
 	Plugin.prototype.unsetFixed = function () {
-		 $("." + this.options.classSnapHolder).remove();
+		$("." + this.options.classSnapHolder).remove();
 		if($el.parent().is("." + this.options.classSnapFixed)) $el.unwrap();
 		isFixed = false;
 	};
