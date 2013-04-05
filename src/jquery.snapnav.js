@@ -27,11 +27,11 @@
         this.init();
     }
 	
-	// set a placeholder to allow detection of original position. wrap in a div with position fixed style. allowing a class to be set for both new elements to allow overriding of style
-	Plugin.prototype.setFixed = function () {
-		$el.before('<div class="' + this.options.classSnapHolder + '" style="display:block; width:0; height:0; margin:0; padding:0;"></div>');
-        $el.wrap('<div class="' + this.options.classSnapFixed + '" style="width:100%; position:fixed; top:0; left:0; z-index:999;" />');
-        isFixed = true;
+    // set a placeholder to allow detection of original position. wrap in a div with position fixed style. allowing a class to be set for both new elements to allow overriding of style
+    Plugin.prototype.setFixed = function () {
+    	$el.before('<div class="' + this.options.classSnapHolder + '" style="display:block; width:0; height:0; margin:0; padding:0;"></div>');
+    	$el.wrap('<div class="' + this.options.classSnapFixed + '" style="width:100%; position:fixed; top:0; left:0; z-index:999;" />');
+    	isFixed = true;
     };
 	
 	// unset the fixed position to original state by removing placeholder and container
