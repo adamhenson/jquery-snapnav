@@ -23,8 +23,6 @@
 		el = element;
 		$el = $(element);
 		this.options = $.extend( {}, defaults, options);
-		this._defaults = defaults;
-		this._name = pluginName;
 		this.init();
 	 }
 	
