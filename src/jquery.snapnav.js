@@ -28,7 +28,7 @@
 	
 	 // set a placeholder to allow detection of original position. wrap in a div with position fixed style. allowing a class to be set for both new elements to allow overriding of style
 	 Plugin.prototype.setFixed = function () {
-		$el.before('<div class="' + this.options.classSnapHolder + '" style="display:block; width:0; height:0; margin:0; padding:0;"></div>');
+		$el.before('<div class="' + this.options.classSnapHolder + '" style="display:block; height:' + $el.outerHeight() + 'px; margin:0; padding:0;"></div>');
 		$el.wrap('<div class="' + this.options.classSnapFixed + '" style="width:100%; position:fixed; top:0; left:0; z-index:999;" />');
 		isFixed = true;
 	 };
@@ -45,7 +45,7 @@
 		var theObj = this;
 		currOffset = el.getBoundingClientRect().top;
 		if(currOffset <= 0 && isFixed == false) this.setFixed();
-		$(window).scroll(function() {
+		$(window).on("touchstart touchmove touchend scroll", function() {
 			currOffset = el.getBoundingClientRect().top;
 			if(currOffset <= 0 && isFixed == false) theObj.setFixed();
 			else if($("." + theObj.options.classSnapHolder).length && $("." + theObj.options.classSnapHolder)[0].getBoundingClientRect().top >= $el.height() && isFixed == true) theObj.unsetFixed();
