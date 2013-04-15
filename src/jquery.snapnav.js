@@ -45,7 +45,7 @@
 		var theObj = this;
 		currOffset = el.getBoundingClientRect().top;
 		if(currOffset <= 0 && isFixed == false) this.setFixed();
-		$(window).on("touchstart touchmove touchend scroll", function() {
+		$(window).on("scroll", function() {
 			currOffset = el.getBoundingClientRect().top;
 			if(currOffset <= 0 && isFixed == false) theObj.setFixed();
 			else if($("." + theObj.options.classSnapHolder).length && $("." + theObj.options.classSnapHolder)[0].getBoundingClientRect().top >= $el.height() && isFixed == true) theObj.unsetFixed();
