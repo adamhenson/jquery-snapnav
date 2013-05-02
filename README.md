@@ -3,7 +3,7 @@ jquery.snapnav.js
 
 A jQuery plugin that sets an element fixed to the top of the window when the top of the element meets or is above it. 
 
-The element snaps back in it's original position if the original position is met.
+The element snaps back in its original position if the original position is met.
 
 Usage
 -------------
