@@ -16,7 +16,7 @@ Two elements are added to the DOM when the element becomes fixed:
 
 $("#my-snappy-element").snapNav();
 
-### Using Options
+### Options
 
 Classes may be specified to replace in the noted elements above like so:
 
